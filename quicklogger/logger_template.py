@@ -1,4 +1,5 @@
 import logging
+import sys
 
 # Possible logging levels and when to use them:
 # DEBUG: Detailed information, typically of interest only when diagnosing problems
@@ -9,7 +10,7 @@ import logging
 
 # You can change the logging level by setting the level argument below to one of the following:
 # logging.DEBUG, logging.INFO, logging.WARNING, logging.ERROR, logging.CRITICAL
-def setup_logger(level=logging.INFO):
+def setup_logger(level=logging.INFO, log_file=None):
     logger = logging.getLogger(__name__)
     logger.setLevel(level)
 
@@ -22,7 +23,7 @@ def setup_logger(level=logging.INFO):
     logger.addHandler(file_handler)
 
     # Create a console handler to display logs in the console
-    console_handler = logging.StreamHandler()
+    console_handler = logging.StreamHandler(sys.stdout)
     console_handler.setLevel(level)
     console_handler.setFormatter(formatter)
     logger.addHandler(console_handler)
