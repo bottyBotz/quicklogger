@@ -1,12 +1,12 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="quicklogger",
+    name="quicklogging",
     version="0.1.0",
     description="A simple and quick logger setup for Python projects",
-    author="Your Name",
-    author_email="your.email@example.com",
-    url="https://github.com/yourusername/quicklogger",
+    author="Daniel Efting",
+    author_email="",
+    url="https://github.com/bottyBotz/quicklogging",
     packages=find_packages(),
     install_requires=[
         # Add any dependencies here, e.g.:
